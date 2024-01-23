@@ -12,16 +12,20 @@ const Products = () => {
   };
 
   return (
-    <main className="bg-slate-400 w-full h-auto">
-      <section className="w-2/4">
-        <img src={chosenImg} alt="" className="w-2/5 h-2/5"/>
+    <main className="bg-slate-400 w-full h-auto flex">
+      <section className="flex flex-col items-center justify-center">
+        <img src={chosenImg} alt="" className="h-2/5"/>
         <div>
           <li className="list-none flex">{productImgs.map((item, index) => <ul onClick={() => changeImg(index)} key={index}><img src={item} alt="" className="w-20 h-20"/></ul>)}</li>
         </div>
       </section>
 
-      <section>
-
+      <section className="flex flex-col justify-center">
+        <p>sneaker company</p>
+        <h3>Fall Limited Edition Sneakers</h3>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they´ll withstand everithing the weather can offer.</p>
+        <p>precio descuento</p>
+        <p>cantidad</p> <button>Add to cart</button>
       </section>
     </main>
   );
